@@ -1,0 +1,11 @@
+INSTALL SALTSTACK MINION AND ASK FOR KEY
+curl -L https://bootstrap.salstack.com -o install_salt.sh
+sudo sh install_salt.sh
+
+sudo nano /etc/salt/minion
+  master: 10.0.7.119
+  
+sudo service salt-minion restart
+ 
+ ACCEPT KEYS:
+sudo salt-key --accept-all
