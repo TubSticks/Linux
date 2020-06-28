@@ -1,5 +1,11 @@
+#Op de nieuwe Minion:
 sudo apt-get update
 sudo curl -L https://bootstrap.salstack.com -o install_salt.sh
-sudo sh install_salt.sh
-sudo sh -c "echo '10.0.7.119 salt' >> /etc/hosts"
+sudo sh install_salt.sh -A 10.0.7.119
+#sudo sh -c "echo '10.0.7.119 salt' >> /etc/hosts"
+
+#Op de Master:
+sudo salt-key --accept-all
+
+#Op de nieuwe Minion:
 sudo service salt-minion restart
